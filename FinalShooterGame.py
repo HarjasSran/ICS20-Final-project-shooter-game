@@ -7,6 +7,7 @@ import pygame
 import math
 import shelve
 pygame.init()
+import random
 
 
 size = (1000,700)
@@ -25,12 +26,12 @@ font2 = pygame.font.SysFont('Calibri', 20, False, True)
 font3 = pygame.font.SysFont('Calibri', 90, False, True)
 
 #Music
-pygame.mixer.music.load("atarimusic.ogg")
-pygame.mixer.music.play(-1,0.0)
+#pygame.mixer.music.load("atarimusic.ogg")
+#pygame.mixer.music.play(-1,0.0)
 
 #Heart Image
-heartImg = pygame.image.load("heart.png")
-heartImg = pygame.transform.scale(heartImg, [25,25])
+#heartImg = pygame.image.load("heart.png")
+#heartImg = pygame.transform.scale(heartImg, [25,25])
 
 #Starting off display Booleans
 rect1 = True
@@ -211,8 +212,8 @@ while not done:
         if rect_count == 1 or rect_count == 6:
             rect1_x = 100
             rect1_y = 100
-			rect_count = random.randrange(2,6)
-            
+            rect_count = random.randrange(2,6)
+
             rect2_x = 250
             rect2_y = 250
             
@@ -363,7 +364,7 @@ while not done:
             screen.blit(lifeText, [x + 100, 685])
         
         #Heart Image Draw
-        screen.blit(heartImg, [x + 75, 675])
+        #screen.blit(heartImg, [x + 75, 675])
         
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
