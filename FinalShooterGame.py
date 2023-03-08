@@ -3,6 +3,10 @@
 #Final Shooter game Project
 #June 14, 2019
 
+#add back hearts png
+#add back music
+
+
 import pygame
 import math
 import shelve
